@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "首页",
+    "vehicles": "车辆库存",
+    "compare": "车型对比",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "getQuote": "获取报价",
+    "language": "语言"
+  },
+  "hero": {
+    "title": "值得信赖的B2B二手车出口平台",
+    "subtitle": "为全球经销商提供优质二手车 · 专业检测 · 无缝物流",
+    "selectBrand": "选择品牌",
+    "selectModel": "选择车型",
+    "selectYear": "选择年份",
+    "search": "搜索",
+    "popular": "热门：",
+    "toyotaSuv": "丰田 SUV",
+    "electricCars": "电动车",
+    "under20k": "2万美元以下"
+  },
+  "brands": {
+    "title": "按品牌浏览",
+    "subtitle": "探索我们来自世界知名制造商的认证二手车库存。"
+  },
+  "featured": {
+    "title": "精选车型",
+    "subtitle": "为国际经销商精心挑选的优质车源。",
+    "viewAll": "查看全部库存"
+  },
+  "whyUs": {
+    "title": "为什么选择 AutoGlobal？",
+    "subtitle": "我们提供专业的 B2B 汽车出口服务，助力您的经销业务稳健增长。",
+    "quality": "品质保证",
+    "qualityDesc": "每辆车都经过严格的 200 项检测，确保符合国际标准。",
+    "shipping": "全球航运",
+    "shippingDesc": "端到端物流解决方案，交付至全球 50 多个国家。",
+    "pricing": "竞争性价格",
+    "pricingDesc": "直接从主要市场采购，使我们能够提供最佳的 B2B 价格。",
+    "support": "专人支持",
+    "supportDesc": "24/7 多语言支持，从初步查询到最终交付全程无忧。"
+  },
+  "stats": {
+    "vehicles": "已出口车辆",
+    "countries": "目的地国家",
+    "partners": "全球合作伙伴",
+    "experience": "行业经验"
+  },
+  "cta": {
+    "title": "准备好扩大您的经销商库存了吗？",
+    "subtitle": "加入全球数千名信任 AutoGlobal 采购高质量二手车的经销商行列。",
+    "browseInventory": "浏览库存",
+    "contactSales": "联系销售团队"
+  },
+  "listing": {
+    "title": "车辆库存",
+    "subtitle": "展示可供出口的全球优质二手车库存。",
+    "found": "找到",
+    "vehiclesCount": "辆车",
+    "sortBy": "排序方式：",
+    "newest": "最新上线",
+    "priceLow": "价格：从低到高",
+    "priceHigh": "价格：从高到低",
+    "yearNewest": "年份：从新到旧",
+    "noResults": "未找到符合您标准的车辆。",
+    "noResultsHint": "请尝试调整您的筛选条件或搜索关键词。"
+  },
+  "filters": {
+    "brand": "品牌",
+    "allBrands": "所有品牌",
+    "price": "价格 (美元)",
+    "min": "最低",
+    "max": "最高",
+    "year": "年份",
+    "from": "从",
+    "to": "至",
+    "fuel": "燃油",
+    "allFuel": "所有燃油类型",
+    "transmission": "变速箱",
+    "allTrans": "所有变速箱",
+    "sedan": "轿车",
+    "suv": "SUV",
+    "mpv": "MPV",
+    "pickup": "皮卡",
+    "van": "面包车",
+    "clearAll": "清除全部"
+  },
+  "card": {
+    "featured": "精选",
+    "exportPrice": "出口价格",
+    "inquireNow": "立即咨询",
+    "addCompare": "对比",
+    "added": "已添加"
+  },
+  "detail": {
+    "home": "首页",
+    "vehicles": "车辆",
+    "inStock": "有现货",
+    "verified": "已认证",
+    "stockId": "库存编号",
+    "fobPrice": "FOB 价格 (美元)",
+    "approx": "约",
+    "inquireBestPrice": "咨询底价",
+    "downloadPdf": "下载 PDF 报告",
+    "whatsappInquiry": "WhatsApp 咨询",
+    "salesTeam": "AutoGlobal 销售团队",
+    "salesExpert": "出口物流专家",
+    "inspection": "经过认证的 200 项检测",
+    "customs": "海关文件支持",
+    "specs": "车辆规格",
+    "yearLabel": "年份",
+    "mileage": "里程",
+    "fuelLabel": "燃油",
+    "transLabel": "变速箱",
+    "bodyType": "车身类型",
+    "color": "颜色",
+    "engine": "发动机",
+    "driveType": "驱动方式",
+    "doors": "车门数",
+    "seats": "座位数",
+    "condition": "状况",
+    "location": "所在地",
+    "features": "核心配置",
+    "description": "车辆详情",
+    "relatedVehicles": "同类优质 SUV"
+  },
+  "inquiry": {
+    "title": "发送咨询",
+    "success": "咨询发送成功！",
+    "successMsg": "我们的销售团队将在 24 小时内联系您。",
+    "yourName": "您的姓名",
+    "email": "电子邮箱",
+    "phone": "电话 / WhatsApp",
+    "company": "公司名称",
+    "country": "目标国家",
+    "selectCountry": "选择国家",
+    "port": "目的港",
+    "portPlaceholder": "例如：杰贝阿里 (Jebel Ali)",
+    "quantity": "数量",
+    "message": "留言",
+    "messagePlaceholder": "我对这款车很感兴趣。请向我发送最终价格和检测报告。",
+    "sending": "发送中...",
+    "send": "提交咨询"
+  },
+  "compare": {
+    "title": "车型对比",
+    "subtitle": "侧重对比各项参数",
+    "selectVehicle": "选择车型",
+    "noVehicles": "尚未选择对比车型。",
+    "noVehiclesHint": "从库存页面添加车辆即可进行侧重对比。",
+    "browseVehicles": "浏览车辆",
+    "specifications": "技术规格",
+    "removeAll": "全部移除",
+    "maxReached": "最多可对比 4 辆车"
+  },
+  "whatsapp": {
+    "tooltip": "WhatsApp 在线咨询",
+    "defaultMsg": "您好，我对您的二手车库存很感兴趣。请发送更多详情。"
+  },
+  "footer": {
+    "description": "领先的 B2B 二手车出口平台，为全球经销商提供来自主要市场的优质二手车，并提供值得信赖的检测和航运服务。",
+    "quickLinks": "快速链接",
+    "inventory": "车辆库存",
+    "aboutUs": "关于我们",
+    "contactUs": "联系我们",
+    "exportGuide": "出口指南",
+    "popularBrands": "热门品牌",
+    "contactInfo": "联系方式",
+    "officeHours": "办公时间：周一至周五，上午 9 点至下午 6 点 (GMT+8)",
+    "copyright": "AutoGlobal B2B 二手车出口。版权所有。",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "pdf": {
+    "title": "车辆规格报告",
+    "generatedBy": "由 AutoGlobal 生成",
+    "confidential": "机密 - 仅限 B2B 合作伙伴",
+    "contactUs": "联系我们以获取最佳出口价格"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "Home",
+    "vehicles": "Vehicles",
+    "compare": "Compare",
+    "about": "About",
+    "contact": "Contact",
+    "getQuote": "Get Quote",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Trusted B2B Used Car Export Platform",
+    "subtitle": "Quality Pre-owned Vehicles for Global Dealers. Professional Inspection & Seamless Logistics.",
+    "selectBrand": "Select Brand",
+    "selectModel": "Select Model",
+    "selectYear": "Select Year",
+    "search": "Search",
+    "popular": "Popular:",
+    "toyotaSuv": "Toyota SUV",
+    "electricCars": "Electric Cars",
+    "under20k": "Under $20k"
+  },
+  "brands": {
+    "title": "Shop by Brand",
+    "subtitle": "Explore our wide inventory of certified pre-owned vehicles from world-renowned manufacturers."
+  },
+  "featured": {
+    "title": "Featured Vehicles",
+    "subtitle": "Hand-picked premium inventory for international dealers.",
+    "viewAll": "View All Inventory"
+  },
+  "whyUs": {
+    "title": "Why Partner With AutoGlobal?",
+    "subtitle": "We provide professional B2B car export services that help your dealership grow with confidence.",
+    "quality": "Quality Assured",
+    "qualityDesc": "Rigorous 200-point inspection on every vehicle to ensure international standards.",
+    "shipping": "Global Shipping",
+    "shippingDesc": "End-to-end logistics solutions delivering to over 50 countries worldwide.",
+    "pricing": "Competitive Pricing",
+    "pricingDesc": "Direct sourcing from major markets allows us to offer the best B2B prices.",
+    "support": "Dedicated Support",
+    "supportDesc": "24/7 multi-language support from initial inquiry to final delivery."
+  },
+  "stats": {
+    "vehicles": "Vehicles Exported",
+    "countries": "Destination Countries",
+    "partners": "Global Partners",
+    "experience": "Years Experience"
+  },
+  "cta": {
+    "title": "Ready to expand your dealership inventory?",
+    "subtitle": "Join thousands of dealers worldwide who trust AutoGlobal for high-quality used vehicle sourcing.",
+    "browseInventory": "Browse Inventory",
+    "contactSales": "Contact Our Sales Team"
+  },
+  "listing": {
+    "title": "Vehicle Inventory",
+    "subtitle": "Showing global premium used car stock available for export.",
+    "found": "Found",
+    "vehiclesCount": "vehicles",
+    "sortBy": "Sort by:",
+    "newest": "Newest Listed",
+    "priceLow": "Price: Low to High",
+    "priceHigh": "Price: High to Low",
+    "yearNewest": "Year: Newest First",
+    "noResults": "No vehicles found matching your criteria.",
+    "noResultsHint": "Try adjusting your filters or search terms."
+  },
+  "filters": {
+    "brand": "Brand",
+    "allBrands": "All Brands",
+    "price": "Price (USD)",
+    "min": "Min",
+    "max": "Max",
+    "year": "Year",
+    "from": "From",
+    "to": "To",
+    "fuel": "Fuel",
+    "allFuel": "All Fuel Types",
+    "transmission": "Transmission",
+    "allTrans": "All Transmissions",
+    "sedan": "Sedan",
+    "suv": "SUV",
+    "mpv": "MPV",
+    "pickup": "Pickup",
+    "van": "Van",
+    "clearAll": "Clear All"
+  },
+  "card": {
+    "featured": "Featured",
+    "exportPrice": "Export Price",
+    "inquireNow": "Inquire Now",
+    "addCompare": "Compare",
+    "added": "Added"
+  },
+  "detail": {
+    "home": "Home",
+    "vehicles": "Vehicles",
+    "inStock": "In Stock",
+    "verified": "Verified",
+    "stockId": "Stock ID",
+    "fobPrice": "FOB Price (USD)",
+    "approx": "approx.",
+    "inquireBestPrice": "Inquire for Best Price",
+    "downloadPdf": "Download PDF Report",
+    "whatsappInquiry": "WhatsApp Inquiry",
+    "salesTeam": "AutoGlobal Sales Team",
+    "salesExpert": "Expert in Export Logistics",
+    "inspection": "Verified 200-Point Inspection",
+    "customs": "Customs Documentation Support",
+    "specs": "Vehicle Specifications",
+    "yearLabel": "Year",
+    "mileage": "Mileage",
+    "fuelLabel": "Fuel",
+    "transLabel": "Trans",
+    "bodyType": "Body Type",
+    "color": "Color",
+    "engine": "Engine",
+    "driveType": "Drive Type",
+    "doors": "Doors",
+    "seats": "Seats",
+    "condition": "Condition",
+    "location": "Location",
+    "features": "Key Features",
+    "description": "Description",
+    "relatedVehicles": "Similar Premium SUVs"
+  },
+  "inquiry": {
+    "title": "Send Inquiry",
+    "success": "Inquiry Sent Successfully!",
+    "successMsg": "Our sales team will contact you within 24 hours.",
+    "yourName": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone / WhatsApp",
+    "company": "Company Name",
+    "country": "Target Country",
+    "selectCountry": "Select Country",
+    "port": "Destination Port",
+    "portPlaceholder": "e.g. Jebel Ali",
+    "quantity": "Quantity",
+    "message": "Message",
+    "messagePlaceholder": "I am interested in this vehicle. Please send me the final price and inspection report.",
+    "sending": "Sending...",
+    "send": "Send Inquiry"
+  },
+  "compare": {
+    "title": "Vehicle Comparison",
+    "subtitle": "Compare specifications side by side",
+    "selectVehicle": "Select a vehicle",
+    "noVehicles": "No vehicles selected for comparison.",
+    "noVehiclesHint": "Add vehicles from the inventory page to compare them side by side.",
+    "browseVehicles": "Browse Vehicles",
+    "specifications": "Specifications",
+    "removeAll": "Remove All",
+    "maxReached": "Maximum 4 vehicles can be compared"
+  },
+  "whatsapp": {
+    "tooltip": "Chat on WhatsApp",
+    "defaultMsg": "Hi, I'm interested in your used car inventory. Please send me more details."
+  },
+  "footer": {
+    "description": "Leading B2B used car export platform, providing high-quality pre-owned vehicles from major markets to global dealers with trusted inspection and shipping services.",
+    "quickLinks": "Quick Links",
+    "inventory": "Inventory",
+    "aboutUs": "About Us",
+    "contactUs": "Contact",
+    "exportGuide": "Export Guide",
+    "popularBrands": "Popular Brands",
+    "contactInfo": "Contact Info",
+    "officeHours": "Office Hours: Mon - Fri, 9AM - 6PM (GMT+8)",
+    "copyright": "AutoGlobal B2B Used Car Export. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "pdf": {
+    "title": "Vehicle Specification Report",
+    "generatedBy": "Generated by AutoGlobal",
+    "confidential": "CONFIDENTIAL - For B2B Partners Only",
+    "contactUs": "Contact us for the best export price"
+  }
+}

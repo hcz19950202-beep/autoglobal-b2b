@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "vehicles": "Véhicules",
+    "compare": "Comparer",
+    "about": "À propos",
+    "contact": "Contact",
+    "getQuote": "Demander un devis",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Plateforme de confiance pour l'exportation de véhicules d'occasion B2B",
+    "subtitle": "Véhicules d'occasion de qualité pour les concessionnaires mondiaux. Inspection professionnelle et logistique transparente.",
+    "selectBrand": "Choisir la marque",
+    "selectModel": "Choisir le modèle",
+    "selectYear": "Choisir l'année",
+    "search": "Rechercher",
+    "popular": "Populaire :",
+    "toyotaSuv": "SUV Toyota",
+    "electricCars": "Voitures électriques",
+    "under20k": "Moins de 20k$"
+  },
+  "brands": {
+    "title": "Acheter par marque",
+    "subtitle": "Explorez notre vaste inventaire de véhicules d'occasion certifiés provenant de constructeurs de renommée mondiale."
+  },
+  "featured": {
+    "title": "Véhicules en vedette",
+    "subtitle": "Inventaire premium sélectionné pour les concessionnaires internationaux.",
+    "viewAll": "Voir tout l'inventaire"
+  },
+  "whyUs": {
+    "title": "Pourquoi s'associer à AutoGlobal ?",
+    "subtitle": "Nous fournissons des services professionnels d'exportation de voitures B2B qui aident votre concession à se développer en toute confiance.",
+    "quality": "Qualité assurée",
+    "qualityDesc": "Inspection rigoureuse en 200 points sur chaque véhicule pour garantir les normes internationales.",
+    "shipping": "Expédition mondiale",
+    "shippingDesc": "Solutions logistiques de bout en bout livrant dans plus de 50 pays à travers le monde.",
+    "pricing": "Prix compétitifs",
+    "pricingDesc": "L'approvisionnement direct auprès des principaux marchés nous permet d'offrir les meilleurs prix B2B.",
+    "support": "Assistance dédiée",
+    "supportDesc": "Assistance multilingue 24h/24 et 7j/7, de la demande initiale à la livraison finale."
+  },
+  "stats": {
+    "vehicles": "Véhicules exportés",
+    "countries": "Pays de destination",
+    "partners": "Partenaires mondiaux",
+    "experience": "Années d'expérience"
+  },
+  "cta": {
+    "title": "Prêt à élargir l'inventaire de votre concession ?",
+    "subtitle": "Rejoignez des milliers de concessionnaires dans le monde qui font confiance à AutoGlobal pour l'approvisionnement en véhicules d'occasion de haute qualité.",
+    "browseInventory": "Parcourir l'inventaire",
+    "contactSales": "Contacter notre équipe commerciale"
+  },
+  "listing": {
+    "title": "Inventaire de véhicules",
+    "subtitle": "Affichage du stock mondial de voitures d'occasion premium disponibles pour l'exportation.",
+    "found": "Trouvé",
+    "vehiclesCount": "véhicules",
+    "sortBy": "Trier par :",
+    "newest": "Derniers inscrits",
+    "priceLow": "Prix : croissant",
+    "priceHigh": "Prix : décroissant",
+    "yearNewest": "Année : la plus récente",
+    "noResults": "Aucun véhicule ne correspond à vos critères.",
+    "noResultsHint": "Essayez d'ajuster vos filtres ou vos termes de recherche."
+  },
+  "filters": {
+    "brand": "Marque",
+    "allBrands": "Toutes les marques",
+    "price": "Prix (USD)",
+    "min": "Min",
+    "max": "Max",
+    "year": "Année",
+    "from": "De",
+    "to": "À",
+    "fuel": "Carburant",
+    "allFuel": "Tous les types de carburant",
+    "transmission": "Transmission",
+    "allTrans": "Toutes les transmissions",
+    "sedan": "Berline",
+    "suv": "SUV",
+    "mpv": "Monospace",
+    "pickup": "Pickup",
+    "van": "Fourgon",
+    "clearAll": "Tout effacer"
+  },
+  "card": {
+    "featured": "En vedette",
+    "exportPrice": "Prix d'exportation",
+    "inquireNow": "Demander des infos",
+    "addCompare": "Comparer",
+    "added": "Ajouté"
+  },
+  "detail": {
+    "home": "Accueil",
+    "vehicles": "Véhicules",
+    "inStock": "En stock",
+    "verified": "Vérifié",
+    "stockId": "ID Stock",
+    "fobPrice": "Prix FOB (USD)",
+    "approx": "env.",
+    "inquireBestPrice": "Demander le meilleur prix",
+    "downloadPdf": "Télécharger le rapport PDF",
+    "whatsappInquiry": "Demande via WhatsApp",
+    "salesTeam": "Équipe commerciale AutoGlobal",
+    "salesExpert": "Expert en logistique d'exportation",
+    "inspection": "Inspection certifiée en 200 points",
+    "customs": "Soutien aux documents douaniers",
+    "specs": "Spécifications du véhicule",
+    "yearLabel": "Année",
+    "mileage": "Kilométrage",
+    "fuelLabel": "Carburant",
+    "transLabel": "Trans",
+    "bodyType": "Type de carrosserie",
+    "color": "Couleur",
+    "engine": "Moteur",
+    "driveType": "Type de transmission",
+    "doors": "Portes",
+    "seats": "Sièges",
+    "condition": "État",
+    "location": "Lieu",
+    "features": "Caractéristiques clés",
+    "description": "Description",
+    "relatedVehicles": "SUVs Premium similaires"
+  },
+  "inquiry": {
+    "title": "Envoyer une demande",
+    "success": "Demande envoyée avec succès !",
+    "successMsg": "Notre équipe commerciale vous contactera dans les 24 heures.",
+    "yourName": "Votre nom",
+    "email": "Adresse e-mail",
+    "phone": "Téléphone / WhatsApp",
+    "company": "Nom de l'entreprise",
+    "country": "Pays cible",
+    "selectCountry": "Sélectionner le pays",
+    "port": "Port de destination",
+    "portPlaceholder": "ex. Jebel Ali",
+    "quantity": "Quantité",
+    "message": "Message",
+    "messagePlaceholder": "Je suis intéressé par ce véhicule. Veuillez m'envoyer le prix final et le rapport d'inspection.",
+    "sending": "Envoi...",
+    "send": "Envoyer la demande"
+  },
+  "compare": {
+    "title": "Comparaison de véhicules",
+    "subtitle": "Comparer les spécifications côte à côte",
+    "selectVehicle": "Sélectionner un véhicule",
+    "noVehicles": "Aucun véhicule sélectionné pour la comparaison.",
+    "noVehiclesHint": "Ajoutez des véhicules depuis la page d'inventaire pour les comparer côte à côte.",
+    "browseVehicles": "Parcourir les véhicules",
+    "specifications": "Spécifications",
+    "removeAll": "Tout supprimer",
+    "maxReached": "Maximum 4 véhicules peuvent être comparés"
+  },
+  "whatsapp": {
+    "tooltip": "Discuter sur WhatsApp",
+    "defaultMsg": "Bonjour, je suis intéressé par votre inventaire de voitures d'occasion. Veuillez m'envoyer plus de détails."
+  },
+  "footer": {
+    "description": "Principale plateforme d'exportation de voitures d'occasion B2B, fournissant des véhicules d'occasion de haute qualité des principaux marchés aux concessionnaires mondiaux avec des services d'inspection et d'expédition de confiance.",
+    "quickLinks": "Liens rapides",
+    "inventory": "Inventaire",
+    "aboutUs": "À propos de nous",
+    "contactUs": "Contact",
+    "exportGuide": "Guide d'exportation",
+    "popularBrands": "Marques populaires",
+    "contactInfo": "Coordonnées",
+    "officeHours": "Heures de bureau : lun - ven, 9h - 18h (GMT+8)",
+    "copyright": "AutoGlobal B2B Exportation de voitures d'occasion. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "pdf": {
+    "title": "Rapport de spécifications du véhicule",
+    "generatedBy": "Généré par AutoGlobal",
+    "confidential": "CONFIDENTIEL - Réservé aux partenaires B2B",
+    "contactUs": "Contactez-nous pour le meilleur prix d'exportation"
+  }
+}
