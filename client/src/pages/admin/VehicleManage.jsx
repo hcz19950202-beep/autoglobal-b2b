@@ -30,8 +30,14 @@ const VehicleManage = () => {
     try {
       try {
         const response = await getVehicles({ page, search: searchTerm, limit: 10 });
-        setVehicles(response.vehicles || []);
-        setTotalPages(response.totalPages || 1);
+        const list = (response.vehicles || []).map(v => ({
+          ...v,
+          id: v._id || v.id,
+          mainImage: v.images?.[0] || v.mainImage,
+          status: v.stockStatus || v.status || 'available',
+        }));
+        setVehicles(list);
+        setTotalPages(response.pages || response.totalPages || 1);
       } catch (e) {
         setVehicles([
           { id: '1', mainImage: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=200&q=80', title: '丰田凯美瑞混动 2022', brand: '丰田', year: 2022, price: 32000, status: 'available' },
