@@ -9,7 +9,7 @@ const Footer = () => {
   const { config, getWhatsAppUrl } = useSiteConfig();
   const currentYear = new Date().getFullYear();
 
-  const brands = ['Toyota', 'Honda', 'BMW', 'Mercedes', 'Nissan', 'Hyundai', 'Ford', 'Audi'];
+  const brands = ['BYD', 'Geely', 'Chery', 'Great Wall', 'NIO', 'XPeng', 'Li Auto', 'Zeekr', 'Changan', 'Hongqi', 'MG', 'Toyota', 'Honda', 'BMW', 'Mercedes', 'Nissan', 'Tesla'];
   const quickLinks = [
     { name: t('nav.home'), path: '/' },
     { name: t('footer.inventory'), path: '/vehicles' },

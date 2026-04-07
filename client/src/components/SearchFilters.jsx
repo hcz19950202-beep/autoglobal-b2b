@@ -16,7 +16,16 @@ const SearchFilters = ({ filters, onFilterChange, onClearFilters }) => {
     { id: 'van', label: t('filters.van'), icon: <FaBus /> },
   ];
 
-  const brands = ['Toyota', 'Honda', 'BMW', 'Mercedes', 'Nissan', 'Hyundai', 'Ford', 'Audi', 'Volkswagen', 'Tesla'];
+  const brands = [
+    'BYD', 'Geely', 'Great Wall', 'Haval', 'Tank', 'WEY', 'Chery', 'Changan', 'NIO', 'XPeng',
+    'Li Auto', 'Leapmotor', 'Zeekr', 'Arcfox', 'Voyah', 'Neta', 'AITO', 'Wuling', 'Hongqi',
+    'GAC', 'Roewe', 'MG', 'BYD Yangwang', 'Lynk & Co', 'Polestar', 'Xiaomi', 'Denza', 'Deepal',
+    'ORA', 'Jetour', 'Exeed', 'iCAR',
+    'Toyota', 'Honda', 'Nissan', 'Mitsubishi', 'Mazda', 'Subaru', 'Suzuki', 'Isuzu', 'Lexus',
+    'BMW', 'Mercedes', 'Audi', 'Volkswagen', 'Porsche',
+    'Tesla', 'Ford', 'Chevrolet', 'Buick', 'Jeep', 'Cadillac',
+    'Hyundai', 'Kia', 'Volvo', 'Land Rover',
+  ];
   const fuelTypes = ['Petrol', 'Diesel', 'Hybrid', 'Electric', 'LPG'];
   const transmissions = ['Automatic', 'Manual'];
 
