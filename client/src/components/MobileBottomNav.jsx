@@ -9,8 +9,8 @@ const MobileBottomNav = () => {
   const { compareCount } = useCompare();
   const { t } = useLanguage();
 
-  // Don't show on admin pages
-  if (location.pathname.startsWith('/admin')) return null;
+  // Don't show on admin pages or vehicle detail pages (where we have a custom inquiry bar)
+  if (location.pathname.startsWith('/admin') || location.pathname.startsWith('/vehicles/')) return null;
 
   const navItems = [
     { 

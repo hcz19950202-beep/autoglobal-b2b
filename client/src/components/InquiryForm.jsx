@@ -152,17 +152,17 @@ const InquiryForm = ({ vehicle, isOpen, onClose }) => {
                     <textarea name="message" rows="3" value={formData.message} onChange={handleChange} placeholder={t('inquiry.messagePlaceholder')} className="w-full border-gray-300 rounded-md focus:ring-primary focus:border-primary text-sm"></textarea>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2 sm:pt-4">
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4 sm:pt-6">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="flex-1 btn-primary flex items-center justify-center py-3"
+                      className="flex-[2] bg-gradient-to-r from-primary to-blue-600 hover:from-primary-dark hover:to-blue-700 text-white font-black py-4 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center border border-white/10"
                     >
                       {isSubmitting ? (
-                        <span className="flex items-center"><div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div> {t('inquiry.sending')}</span>
+                        <span className="flex items-center"><div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-3"></div> {t('inquiry.sending')}</span>
                       ) : (
                         <>
-                          <HiPaperAirplane className="mr-2 rotate-90" />
+                          <HiPaperAirplane className="mr-2.5 rotate-90 w-5 h-5" />
                           {t('inquiry.send')}
                         </>
                       )}
@@ -171,9 +171,9 @@ const InquiryForm = ({ vehicle, isOpen, onClose }) => {
                       href={getWhatsAppUrl(whatsappMsg)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5C] text-white font-semibold py-3 px-6 rounded-md transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5C] text-white font-black py-4 px-6 rounded-xl shadow-lg shadow-green-500/20 transition-all active:scale-[0.98] border border-white/10"
                     >
-                      <FaWhatsapp className="w-5 h-5" />
+                      <FaWhatsapp className="w-5.5 h-5.5" />
                       WhatsApp
                     </a>
                   </div>

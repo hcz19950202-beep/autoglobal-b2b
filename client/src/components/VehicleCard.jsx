@@ -92,7 +92,7 @@ const VehicleCard = ({ vehicle }) => {
             <span className="text-gray-400 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider">FOB PRICE</span>
             <div className="text-primary text-xl sm:text-2xl font-black tracking-tight">${price?.toLocaleString()}</div>
           </div>
-          <Link to={`/vehicles/${id}`} className="bg-primary hover:bg-primary-dark text-white font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-[10px] sm:text-xs transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 active:scale-95 whitespace-nowrap flex items-center gap-1.5">
+          <Link to={`/vehicles/${id}`} className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary-dark hover:to-blue-700 text-white font-black px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl text-[11px] sm:text-xs transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 active:scale-95 whitespace-nowrap flex items-center gap-1.5 border border-white/10">
             {t('card.inquireNow')} <HiOutlineArrowRight className="w-3.5 h-3.5 hidden sm:block" />
           </Link>
         </div>

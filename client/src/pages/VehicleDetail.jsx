@@ -266,32 +266,32 @@ const VehicleDetail = () => {
 
               <button 
                 onClick={() => setIsInquiryModalOpen(true)}
-                className="w-full btn-secondary !py-4 text-lg font-bold flex items-center justify-center gap-2 mb-3"
+                className="w-full bg-gradient-to-r from-primary to-blue-600 text-white !py-4.5 text-lg font-black flex items-center justify-center gap-2.5 mb-3 rounded-xl shadow-xl shadow-primary/20 active:scale-[0.98] border border-white/10"
               >
-                {t('detail.inquireBestPrice')}
+                <HiOutlineChatAlt2 className="w-6 h-6" /> {t('detail.inquireBestPrice')}
               </button>
 
               <a 
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5C] text-white font-bold py-3.5 rounded-md transition-colors mb-3"
+                className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5C] text-white font-black py-4 rounded-xl shadow-lg shadow-green-500/20 transition-all mb-3 active:scale-[0.98] border border-white/10"
               >
-                <FaWhatsapp className="w-5 h-5" /> {t('detail.whatsappInquiry')}
+                <FaWhatsapp className="w-6 h-6" /> {t('detail.whatsappInquiry')}
               </a>
               
               <PdfExportButton 
                 vehicle={vehicle} 
-                className="w-full bg-white border-2 border-primary text-primary hover:bg-blue-50 font-bold py-3.5 rounded-md transition-colors mb-3"
+                className="w-full bg-white border-2 border-primary text-primary hover:bg-blue-50 font-bold py-4 rounded-xl transition-all mb-3 flex items-center justify-center gap-2"
               />
 
               <button
                 onClick={() => addToCompare(vehicle)}
                 disabled={isInCompare(vehicle.id)}
-                className={`w-full border-2 font-bold py-3 rounded-md transition-colors text-sm ${
+                className={`w-full border-2 font-bold py-3.5 rounded-xl transition-all text-sm ${
                   isInCompare(vehicle.id) 
                     ? 'border-gray-300 text-gray-400 bg-gray-50' 
-                    : 'border-gray-300 text-gray-700 hover:border-primary hover:text-primary'
+                    : 'border-gray-200 text-gray-700 hover:border-primary hover:text-primary'
                 }`}
               >
                 {isInCompare(vehicle.id) ? `✓ ${t('card.added')}` : `+ ${t('card.addCompare')}`}
@@ -346,6 +346,24 @@ const VehicleDetail = () => {
         onClose={() => setIsInquiryModalOpen(false)} 
         vehicle={vehicle} 
       />
+
+      {/* Sticky Mobile Action Bar */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 p-3 flex gap-3 z-50 safe-area-bottom shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
+        <a
+          href={getWhatsAppUrl(vehicle.id)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-[#25D366] text-white font-black py-3 rounded-xl text-[13px] transition-all active:scale-95 shadow-lg shadow-green-500/20"
+        >
+          <FaWhatsapp className="w-4.5 h-4.5" /> WhatsApp
+        </a>
+        <button
+          onClick={() => setIsInquiryModalOpen(true)}
+          className="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-primary to-blue-600 text-white font-black py-3 rounded-xl text-[13px] transition-all active:scale-95 shadow-lg shadow-primary/20"
+        >
+          <HiOutlineChatAlt2 className="w-4.5 h-4.5" /> {t('detail.inquireNow')}
+        </button>
+      </div>
     </div>
   );
 };
