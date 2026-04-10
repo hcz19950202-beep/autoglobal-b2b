@@ -50,8 +50,14 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">AutoGlobal</span>
+          <Link to="/" className="flex items-center gap-2">
+            <div className="bg-primary text-white p-2 rounded-lg">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-black text-gray-900 tracking-tight leading-none">AutoGlobal</span>
+              <span className="text-[10px] md:text-xs font-bold text-primary tracking-widest uppercase">China Export</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

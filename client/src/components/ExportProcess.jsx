@@ -9,11 +9,11 @@ import {
 import { FaShip } from 'react-icons/fa';
 
 const steps = [
-  { id: 1, icon: HiOutlineClipboardList, title: "Inquiry", desc: "Send us your requirements and target vehicles" },
-  { id: 2, icon: HiOutlineSearch, title: "Inspection", desc: "200-point professional inspection on every vehicle" },
-  { id: 3, icon: HiOutlineDocumentText, title: "Documentation", desc: "Export papers, customs clearance & insurance" },
-  { id: 4, icon: FaShip, title: "Shipping", desc: "RoRo or container shipping to your port" },
-  { id: 5, icon: HiOutlineCheckCircle, title: "Delivery", desc: "Vehicle arrives safely at your dealership" },
+  { id: 1, icon: HiOutlineClipboardList, title: "Inquiry & Quote", desc: "Send requirements, get FOB/CIF pricing" },
+  { id: 2, icon: HiOutlineDocumentText, title: "Contract & Deposit", desc: "Sign PI, pay 30% T/T deposit" },
+  { id: 3, icon: HiOutlineSearch, title: "Procurement & Deregistration", desc: "SGS inspection, cancel Chinese license plate" },
+  { id: 4, icon: FaShip, title: "Customs & Loading", desc: "Export clearance, RoRo/Container loading, pay 70% balance" },
+  { id: 5, icon: HiOutlineCheckCircle, title: "Shipping & B/L", desc: "Vessel departs, receive Telex Release B/L & Certificates" },
 ];
 
 const ExportProcess = () => {

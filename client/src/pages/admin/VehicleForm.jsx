@@ -14,24 +14,91 @@ const VehicleForm = () => {
   const [isSaving, setIsSaving] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState('');
+  // 品牌列表：value 存英文（数据库 + 前台搜索），label 显示中文+英文方便后台识别
   const [brands] = useState([
-    // 中国品牌
-    '比亚迪', '吉利', '长城', '哈弗', '坦克', '魏牌(WEY)', '奇瑞', '长安', '蔚来', '小鹏',
-    '理想', '零跑', '极氪', '极狐', '岚图', '哪吒', '问界', '智界', '享界', '飞凡',
-    '五菱', '宝骏', '红旗', '一汽奔腾', '传祺', '荣威', '名爵(MG)', 'AITO',
-    '东风', '江淮', '北汽', '上汽大通', '福田', '中兴', '陆风', '猎豹',
-    '领克', '极星', '小米', '仰望', '方程豹', '腾势', '深蓝', '启源', '银河',
-    '欧拉', '捷途', '星途', 'iCAR', '大运', '远航', '昊铂',
-    // 日系品牌
-    '丰田', '本田', '日产', '三菱', '马自达', '斯巴鲁', '铃木', '五十铃', '雷克萨斯',
-    // 德系品牌
-    '宝马', '奔驰', '奥迪', '大众', '保时捷',
-    // 美系品牌
-    '特斯拉', '福特', '雪佛兰', '别克', 'Jeep', '凯迪拉克', 'GMC',
-    // 韩系品牌
-    '现代', '起亚',
-    // 其他
-    '沃尔沃', '路虎', '捷豹', '标致', '雪铁龙', '雷诺', '菲亚特',
+    // ── 中国品牌 ──
+    { value: 'BYD', label: '比亚迪 BYD' },
+    { value: 'Geely', label: '吉利 Geely' },
+    { value: 'Great Wall', label: '长城 Great Wall' },
+    { value: 'Haval', label: '哈弗 Haval' },
+    { value: 'Tank', label: '坦克 Tank' },
+    { value: 'WEY', label: '魏牌 WEY' },
+    { value: 'Chery', label: '奇瑞 Chery' },
+    { value: 'Changan', label: '长安 Changan' },
+    { value: 'NIO', label: '蔚来 NIO' },
+    { value: 'XPeng', label: '小鹏 XPeng' },
+    { value: 'Li Auto', label: '理想 Li Auto' },
+    { value: 'Leapmotor', label: '零跑 Leapmotor' },
+    { value: 'Zeekr', label: '极氪 Zeekr' },
+    { value: 'Arcfox', label: '极狐 Arcfox' },
+    { value: 'Voyah', label: '岚图 Voyah' },
+    { value: 'Neta', label: '哪吒 Neta' },
+    { value: 'AITO', label: '问界 AITO' },
+    { value: 'Luxeed', label: '智界 Luxeed' },
+    { value: 'Stelato', label: '享界 Stelato' },
+    { value: 'Rising Auto', label: '飞凡 Rising Auto' },
+    { value: 'Wuling', label: '五菱 Wuling' },
+    { value: 'Baojun', label: '宝骏 Baojun' },
+    { value: 'Hongqi', label: '红旗 Hongqi' },
+    { value: 'Bestune', label: '奔腾 Bestune' },
+    { value: 'Trumpchi', label: '传祺 Trumpchi' },
+    { value: 'Roewe', label: '荣威 Roewe' },
+    { value: 'MG', label: '名爵 MG' },
+    { value: 'Dongfeng', label: '东风 Dongfeng' },
+    { value: 'JAC', label: '江淮 JAC' },
+    { value: 'BAIC', label: '北汽 BAIC' },
+    { value: 'Maxus', label: '上汽大通 Maxus' },
+    { value: 'Foton', label: '福田 Foton' },
+    { value: 'Lynk & Co', label: '领克 Lynk & Co' },
+    { value: 'Polestar', label: '极星 Polestar' },
+    { value: 'Xiaomi', label: '小米 Xiaomi' },
+    { value: 'Yangwang', label: '仰望 Yangwang' },
+    { value: 'Fangchengbao', label: '方程豹 Fangchengbao' },
+    { value: 'Denza', label: '腾势 Denza' },
+    { value: 'Deepal', label: '深蓝 Deepal' },
+    { value: 'Avatr', label: '阿维塔 Avatr' },
+    { value: 'Geely Galaxy', label: '银河 Geely Galaxy' },
+    { value: 'ORA', label: '欧拉 ORA' },
+    { value: 'Jetour', label: '捷途 Jetour' },
+    { value: 'Exeed', label: '星途 Exeed' },
+    { value: 'iCAR', label: 'iCAR' },
+    { value: 'Aion', label: '埃安 Aion' },
+    { value: 'Forthing', label: '风行 Forthing' },
+    { value: 'Livan', label: '力帆 Livan' },
+    // ── 日系品牌 ──
+    { value: 'Toyota', label: '丰田 Toyota' },
+    { value: 'Honda', label: '本田 Honda' },
+    { value: 'Nissan', label: '日产 Nissan' },
+    { value: 'Mitsubishi', label: '三菱 Mitsubishi' },
+    { value: 'Mazda', label: '马自达 Mazda' },
+    { value: 'Subaru', label: '斯巴鲁 Subaru' },
+    { value: 'Suzuki', label: '铃木 Suzuki' },
+    { value: 'Isuzu', label: '五十铃 Isuzu' },
+    { value: 'Lexus', label: '雷克萨斯 Lexus' },
+    // ── 德系品牌 ──
+    { value: 'BMW', label: '宝马 BMW' },
+    { value: 'Mercedes-Benz', label: '奔驰 Mercedes-Benz' },
+    { value: 'Audi', label: '奥迪 Audi' },
+    { value: 'Volkswagen', label: '大众 Volkswagen' },
+    { value: 'Porsche', label: '保时捷 Porsche' },
+    // ── 美系品牌 ──
+    { value: 'Tesla', label: '特斯拉 Tesla' },
+    { value: 'Ford', label: '福特 Ford' },
+    { value: 'Chevrolet', label: '雪佛兰 Chevrolet' },
+    { value: 'Buick', label: '别克 Buick' },
+    { value: 'Jeep', label: 'Jeep' },
+    { value: 'Cadillac', label: '凯迪拉克 Cadillac' },
+    { value: 'GMC', label: 'GMC' },
+    // ── 韩系品牌 ──
+    { value: 'Hyundai', label: '现代 Hyundai' },
+    { value: 'Kia', label: '起亚 Kia' },
+    // ── 其他 ──
+    { value: 'Volvo', label: '沃尔沃 Volvo' },
+    { value: 'Land Rover', label: '路虎 Land Rover' },
+    { value: 'Jaguar', label: '捷豹 Jaguar' },
+    { value: 'Peugeot', label: '标致 Peugeot' },
+    { value: 'Citroën', label: '雪铁龙 Citroën' },
+    { value: 'Renault', label: '雷诺 Renault' },
   ]);
 
   const initialFormState = {
