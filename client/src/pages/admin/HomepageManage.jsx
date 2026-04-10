@@ -94,6 +94,12 @@ const HomepageManage = () => {
     ]
   );
 
+  const [brands, setBrands] = useState(
+    homepage.brands || [
+      { id: '1', name: 'BYD', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/BYD_logo.svg', link: '/vehicles?brand=BYD' }
+    ]
+  );
+
   useEffect(() => {
     setHeroForm({
       heroBg: homepage.heroBg,
@@ -104,7 +110,10 @@ const HomepageManage = () => {
     if (homepage.popularSearches) {
       setPopularSearches(homepage.popularSearches);
     }
-  }, [homepage.heroBg, homepage.heroTitle, homepage.heroSubtitle, homepage.theme.heroOverlay, homepage.popularSearches]);
+    if (homepage.brands) {
+      setBrands(homepage.brands);
+    }
+  }, [homepage.heroBg, homepage.heroTitle, homepage.heroSubtitle, homepage.theme.heroOverlay, homepage.popularSearches, homepage.brands]);
 
   const saveHero = () => {
     updateConfig('homepage', {
@@ -116,6 +125,26 @@ const HomepageManage = () => {
       theme: { ...homepage.theme, heroOverlay: heroForm.heroOverlay }
     });
     showSaved('hero');
+  };
+
+  const saveBrands = () => {
+    updateConfig('homepage', {
+      ...homepage,
+      brands: brands
+    });
+    showSaved('brands');
+  };
+
+  const addBrand = () => {
+    setBrands([...brands, { id: Date.now().toString(), name: '', logo: '', link: '' }]);
+  };
+
+  const updateBrand = (id, field, value) => {
+    setBrands(brands.map(item => item.id === id ? { ...item, [field]: value } : item));
+  };
+
+  const removeBrand = (id) => {
+    setBrands(brands.filter(item => item.id !== id));
   };
 
   const addPopularSearch = () => {
@@ -406,6 +435,64 @@ const HomepageManage = () => {
             </div>
             <button onClick={saveHero} className="px-6 py-2.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-100 flex items-center gap-2">
               保存修改
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 2.5: 品牌展示墙 */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Layout className="w-5 h-5 text-blue-600" />
+            <h3 className="font-bold text-gray-800">品牌展示配置</h3>
+          </div>
+          <SaveBadge show={savedSection === 'brands'} />
+        </div>
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-4">
+            <p className="text-sm text-gray-500">配置前台显示的合作品牌，Logo建议使用透明背景的SVG或PNG图片。</p>
+            <button onClick={addBrand} className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-sm font-bold transition-colors">
+              <Plus className="w-4 h-4" /> 添加品牌
+            </button>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+            {brands.map((brand) => (
+              <div key={brand.id} className="border border-gray-200 rounded-xl p-3 relative group hover:border-blue-300 hover:shadow-md transition-all bg-gray-50/30">
+                <button onClick={() => removeBrand(brand.id)} className="absolute -top-2 -right-2 p-1.5 bg-red-100 text-red-600 hover:bg-red-500 hover:text-white rounded-full opacity-0 group-hover:opacity-100 transition-all z-10 shadow-sm">
+                  <X className="w-3.5 h-3.5" />
+                </button>
+                <div className="h-16 flex items-center justify-center mb-3 bg-white rounded-lg border border-gray-100 p-2 overflow-hidden relative group/img">
+                  {brand.logo ? (
+                    <img src={brand.logo} alt={brand.name} className="max-h-full max-w-full object-contain" />
+                  ) : (
+                    <span className="text-gray-400 text-xs">无Logo</span>
+                  )}
+                  <label className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-xs font-bold opacity-0 group-hover/img:opacity-100 cursor-pointer transition-opacity backdrop-blur-[2px]">
+                    <Upload className="w-4 h-4 mb-1" />
+                    上传
+                    <input 
+                      type="file" className="hidden" accept="image/*"
+                      onChange={(e) => handleFileUpload(e.target.files[0], (data) => updateBrand(brand.id, 'logo', data))}
+                    />
+                  </label>
+                </div>
+                <div className="space-y-2">
+                  <div>
+                    <input type="text" value={brand.name} onChange={(e) => updateBrand(brand.id, 'name', e.target.value)} className="w-full px-2 py-1.5 border border-gray-200 rounded-md text-sm font-bold text-center" placeholder="品牌名 (如: BYD)" />
+                  </div>
+                  <div>
+                    <input type="text" value={brand.link} onChange={(e) => updateBrand(brand.id, 'link', e.target.value)} className="w-full px-2 py-1 border border-gray-200 rounded-md text-[10px] text-center text-gray-500 bg-gray-50 focus:bg-white" placeholder="链接 /vehicles?brand=BYD" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-end pt-4 border-t border-gray-100">
+            <button onClick={saveBrands} className="px-6 py-2.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-100 flex items-center gap-2 text-sm">
+              <Check className="w-4 h-4" /> 保存品牌配置
             </button>
           </div>
         </div>

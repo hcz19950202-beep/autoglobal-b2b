@@ -54,6 +54,19 @@ const defaultConfig = {
       { id: '2', text: 'Electric Cars', link: '/vehicles?fuel=Electric' },
       { id: '3', text: 'Under $10k', link: '/vehicles?maxPrice=10000' },
     ],
+    // 8. 品牌展示墙
+    brands: [
+      { id: '1', name: 'BYD', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/BYD_logo.svg', link: '/vehicles?brand=BYD' },
+      { id: '2', name: 'Geely', logo: 'https://upload.wikimedia.org/wikipedia/en/2/29/Geely_logo.svg', link: '/vehicles?brand=Geely' },
+      { id: '3', name: 'Changan', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Changan_Auto_logo.svg', link: '/vehicles?brand=Changan' },
+      { id: '4', name: 'Great Wall', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Great_Wall_Motor_logo.svg', link: '/vehicles?brand=Great Wall' },
+      { id: '5', name: 'Chery', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Chery_logo.svg', link: '/vehicles?brand=Chery' },
+      { id: '6', name: 'NIO', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/NIO_logo.svg', link: '/vehicles?brand=NIO' },
+      { id: '7', name: 'Toyota', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg', link: '/vehicles?brand=Toyota' },
+      { id: '8', name: 'Honda', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg', link: '/vehicles?brand=Honda' },
+      { id: '9', name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg', link: '/vehicles?brand=Tesla' },
+      { id: '10', name: 'Mercedes', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg', link: '/vehicles?brand=Mercedes-Benz' },
+    ],
   },
 };
 
