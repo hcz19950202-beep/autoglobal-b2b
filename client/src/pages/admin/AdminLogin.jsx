@@ -26,20 +26,28 @@ const AdminLogin = () => {
           return;
         }
         localStorage.setItem('adminToken', response.token);
-        localStorage.setItem('adminUser', JSON.stringify({
-          _id: response._id,
-          name: response.name,
-          email: response.email,
-          role: response.role,
-          permissions: response.permissions,
-        }));
+        localStorage.setItem(
+          'adminUser',
+          JSON.stringify({
+            _id: response._id,
+            name: response.name,
+            email: response.email,
+            role: response.role,
+            permissions: response.permissions,
+          })
+        );
         navigate('/admin');
       }
     } catch (err) {
       // API 不可用时，使用本地 mock 登录（开发环境）
       if (email === 'admin@autoglobal.com' && password === 'admin123') {
         const mockToken = 'mock-jwt-token-' + Date.now();
-        const mockUser = { name: '管理员', email, role: 'admin', permissions: { vehicles: true, inquiries: true, homepage: true, settings: true } };
+        const mockUser = {
+          name: '管理员',
+          email,
+          role: 'admin',
+          permissions: { vehicles: true, inquiries: true, homepage: true, settings: true },
+        };
         localStorage.setItem('adminToken', mockToken);
         localStorage.setItem('adminUser', JSON.stringify(mockUser));
         navigate('/admin');
@@ -60,9 +68,7 @@ const AdminLogin = () => {
           </div>
         </div>
         <h2 className="text-center text-3xl font-extrabold text-gray-900">管理后台</h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
-          管理员和员工均可登录
-        </p>
+        <p className="mt-2 text-center text-sm text-gray-600">管理员和员工均可登录</p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4 sm:px-0">
@@ -75,19 +81,20 @@ const AdminLogin = () => {
               </div>
             )}
 
-            <div className="bg-blue-50 border border-blue-200 p-3 rounded-lg">
-              <p className="text-xs text-blue-700 font-medium">演示账号：</p>
-              <p className="text-xs text-blue-600 mt-1">邮箱：admin@autoglobal.com</p>
-              <p className="text-xs text-blue-600">密码：admin123</p>
-            </div>
-
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">邮箱地址</label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                邮箱地址
+              </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                   <HiOutlineMail className="h-5 w-5" />
                 </div>
-                <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#1a73e8] focus:border-[#1a73e8] transition-all sm:text-sm"
                   placeholder="your@email.com"
                 />
@@ -95,12 +102,19 @@ const AdminLogin = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">密码</label>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                密码
+              </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                   <HiOutlineLockClosed className="h-5 w-5" />
                 </div>
-                <input id="password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)}
+                <input
+                  id="password"
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#1a73e8] focus:border-[#1a73e8] transition-all sm:text-sm"
                   placeholder="输入密码"
                 />
@@ -108,11 +122,15 @@ const AdminLogin = () => {
             </div>
 
             <div>
-              <button type="submit" disabled={isLoading}
+              <button
+                type="submit"
+                disabled={isLoading}
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-md text-sm font-medium text-white bg-[#1a73e8] hover:bg-[#1557b0] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a73e8] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isLoading && <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>}
-                {isLoading ? '登录中...' : '登 录'}
+                {isLoading && (
+                  <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                )}
+                {isLoading ? '登录中...' : '登录'}
               </button>
             </div>
           </form>
