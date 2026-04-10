@@ -9,16 +9,16 @@
     "language": "Language"
   },
   "hero": {
-    "title": "Trusted B2B Used Car Export Platform",
-    "subtitle": "Quality Pre-owned Vehicles for Global Dealers. Professional Inspection & Seamless Logistics.",
+    "title": "China's Leading Used Car & EV Exporter",
+    "subtitle": "Direct sourcing from China's largest auto markets. 0KM New Energy Vehicles & Premium Used Cars for Global Dealers. FOB/CIF pricing available.",
     "selectBrand": "Select Brand",
     "selectModel": "Select Model",
     "selectYear": "Select Year",
     "search": "Search",
     "popular": "Popular:",
-    "toyotaSuv": "Toyota SUV",
+    "toyotaSuv": "BYD EV",
     "electricCars": "Electric Cars",
-    "under20k": "Under $20k"
+    "under20k": "Under $10k"
   },
   "brands": {
     "title": "Shop by Brand",
