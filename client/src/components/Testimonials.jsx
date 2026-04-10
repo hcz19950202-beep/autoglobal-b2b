@@ -4,7 +4,7 @@ import { HiChevronLeft, HiChevronRight, HiStar } from 'react-icons/hi';
 const testimonials = [
   {
     id: 1,
-    quote: "AutoGlobal has been our primary supplier for 3 years. Their inspection quality and shipping reliability are outstanding.",
+    quote: "AutoGlobal has been our primary supplier from China for 3 years. Their EV sourcing and RoRo shipping reliability are outstanding.",
     name: "Ahmed Al-Rashidi",
     company: "Desert Auto Trading",
     country: "UAE",
@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "We've imported over 200 vehicles through AutoGlobal. Competitive pricing and excellent documentation support.",
+    quote: "We've imported over 200 Chinese NEVs and used cars through AutoGlobal. Competitive pricing and excellent SGS inspection support.",
     name: "Youssef Benali",
     company: "Maghreb Motors",
     country: "Morocco",
