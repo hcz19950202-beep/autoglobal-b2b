@@ -48,12 +48,12 @@ const defaultConfig = {
       partners: '5,000+',
       experience: '15+',
     },
-    // 6. 主题色
-    theme: {
-      primaryColor: '#1a73e8',
-      secondaryColor: '#ff6b35',
-      heroOverlay: 'blue',   // blue | green | dark
-    },
+    // 7. 热门搜索快捷标签 (Hero Banner)
+    popularSearches: [
+      { id: '1', text: 'BYD EV', link: '/vehicles?brand=BYD' },
+      { id: '2', text: 'Electric Cars', link: '/vehicles?fuel=Electric' },
+      { id: '3', text: 'Under $10k', link: '/vehicles?maxPrice=10000' },
+    ],
   },
 };
 

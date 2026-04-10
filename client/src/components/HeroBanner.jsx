@@ -101,9 +101,13 @@ const HeroBanner = () => {
           {/* Quick Tags */}
           <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
             <span className="text-white/50 text-xs sm:text-sm">{t('hero.popular')}</span>
-            {[{ label: 'Toyota Land Cruiser', query: 'brand=Toyota' }, { label: 'Electric SUV', query: 'fuel=Electric' }, { label: 'Under $20k', query: 'maxPrice=20000' }].map((tag, i) => (
-              <button key={i} onClick={() => navigate(`/vehicles?${tag.query}`)} className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 text-white text-xs sm:text-sm px-3 py-1.5 rounded-full transition-all hover:scale-105">
-                {tag.label}
+            {(hp.popularSearches && hp.popularSearches.length > 0 ? hp.popularSearches : [
+              { text: 'Toyota Land Cruiser', link: '/vehicles?brand=Toyota' },
+              { text: 'Electric SUV', link: '/vehicles?fuel=Electric' },
+              { text: 'Under $20k', link: '/vehicles?maxPrice=20000' }
+            ]).map((tag, i) => (
+              <button key={i} onClick={() => navigate(tag.link)} className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 text-white text-xs sm:text-sm px-3 py-1.5 rounded-full transition-all hover:scale-105">
+                {tag.text}
               </button>
             ))}
           </div>

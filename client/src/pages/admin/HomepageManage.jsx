@@ -85,6 +85,15 @@ const HomepageManage = () => {
     heroSubtitle: homepage.heroSubtitle,
     heroOverlay: homepage.theme.heroOverlay
   });
+
+  const [popularSearches, setPopularSearches] = useState(
+    homepage.popularSearches || [
+      { id: '1', text: 'BYD EV', link: '/vehicles?brand=BYD' },
+      { id: '2', text: 'Electric Cars', link: '/vehicles?fuel=Electric' },
+      { id: '3', text: 'Under $10k', link: '/vehicles?maxPrice=10000' }
+    ]
+  );
+
   useEffect(() => {
     setHeroForm({
       heroBg: homepage.heroBg,
@@ -92,7 +101,10 @@ const HomepageManage = () => {
       heroSubtitle: homepage.heroSubtitle,
       heroOverlay: homepage.theme.heroOverlay
     });
-  }, [homepage.heroBg, homepage.heroTitle, homepage.heroSubtitle, homepage.theme.heroOverlay]);
+    if (homepage.popularSearches) {
+      setPopularSearches(homepage.popularSearches);
+    }
+  }, [homepage.heroBg, homepage.heroTitle, homepage.heroSubtitle, homepage.theme.heroOverlay, homepage.popularSearches]);
 
   const saveHero = () => {
     updateConfig('homepage', {
@@ -100,9 +112,22 @@ const HomepageManage = () => {
       heroBg: heroForm.heroBg,
       heroTitle: heroForm.heroTitle,
       heroSubtitle: heroForm.heroSubtitle,
+      popularSearches: popularSearches,
       theme: { ...homepage.theme, heroOverlay: heroForm.heroOverlay }
     });
     showSaved('hero');
+  };
+
+  const addPopularSearch = () => {
+    setPopularSearches([...popularSearches, { id: Date.now().toString(), text: '', link: '' }]);
+  };
+
+  const updatePopularSearch = (id, field, value) => {
+    setPopularSearches(popularSearches.map(item => item.id === id ? { ...item, [field]: value } : item));
+  };
+
+  const removePopularSearch = (id) => {
+    setPopularSearches(popularSearches.filter(item => item.id !== id));
   };
 
   // --- Section 3: Announcement State ---
@@ -317,6 +342,43 @@ const HomepageManage = () => {
                   className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-100 transition-all text-sm"
                 />
               </div>
+            </div>
+          </div>
+
+          <div className="pt-4 border-t border-gray-50">
+            <div className="flex justify-between items-center mb-3">
+              <label className="block text-sm font-bold text-gray-700">热门搜索快捷标签 (Hero下方)</label>
+              <button onClick={addPopularSearch} className="text-xs flex items-center gap-1 text-blue-600 hover:text-blue-800 bg-blue-50 px-2.5 py-1.5 rounded-lg font-semibold">
+                <Plus className="w-3.5 h-3.5" /> 添加标签
+              </button>
+            </div>
+            <div className="space-y-3">
+              {popularSearches.map((item) => (
+                <div key={item.id} className="flex items-center gap-3 bg-gray-50 p-2 rounded-xl border border-gray-100">
+                  <div className="flex-1">
+                    <input
+                      type="text"
+                      placeholder="显示文字 (如: BYD EV)"
+                      value={item.text}
+                      onChange={(e) => updatePopularSearch(item.id, 'text', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white"
+                    />
+                  </div>
+                  <div className="flex-[2]">
+                    <input
+                      type="text"
+                      placeholder="跳转链接 (如: /vehicles?brand=BYD)"
+                      value={item.link}
+                      onChange={(e) => updatePopularSearch(item.id, 'link', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white"
+                    />
+                  </div>
+                  <button onClick={() => removePopularSearch(item.id)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors">
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
+              ))}
+              {popularSearches.length === 0 && <p className="text-sm text-gray-400 italic py-2">暂无标签，点击右上角添加</p>}
             </div>
           </div>
 
