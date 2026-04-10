@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { HiOutlineBadgeCheck, HiOutlineCheckCircle, HiChevronLeft, HiChevronRight, HiOutlineShieldCheck } from 'react-icons/hi';
+import { HiOutlineBadgeCheck, HiOutlineCheckCircle, HiChevronLeft, HiChevronRight, HiOutlineShieldCheck, HiOutlineChatAlt2 } from 'react-icons/hi';
 import { GiSpeedometer, GiGearStickPattern } from 'react-icons/gi';
 import { FaGasPump, FaCalendarAlt, FaWhatsapp } from 'react-icons/fa';
 import InquiryForm from '../components/InquiryForm';
