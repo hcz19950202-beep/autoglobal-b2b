@@ -39,21 +39,7 @@ const AdminLogin = () => {
         navigate('/admin');
       }
     } catch (err) {
-      // API 不可用时，使用本地 mock 登录（开发环境）
-      if (email === 'admin@autoglobal.com' && password === 'admin123') {
-        const mockToken = 'mock-jwt-token-' + Date.now();
-        const mockUser = {
-          name: '管理员',
-          email,
-          role: 'admin',
-          permissions: { vehicles: true, inquiries: true, homepage: true, settings: true },
-        };
-        localStorage.setItem('adminToken', mockToken);
-        localStorage.setItem('adminUser', JSON.stringify(mockUser));
-        navigate('/admin');
-      } else {
-        setError(err.response?.data?.message || '账号或密码错误');
-      }
+      setError(err.response?.data?.message || '账号或密码错误');
     } finally {
       setIsLoading(false);
     }

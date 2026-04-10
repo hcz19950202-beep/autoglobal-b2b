@@ -433,23 +433,30 @@ const vehicles = [
   }
 ];
 
+const defaultAdminEmail = process.env.DEFAULT_ADMIN_EMAIL;
+const defaultAdminPassword = process.env.DEFAULT_ADMIN_PASSWORD;
+const defaultAdminName = process.env.DEFAULT_ADMIN_NAME || 'Admin';
+
 const seedDB = async () => {
   try {
     await Vehicle.deleteMany({});
     await Vehicle.insertMany(vehicles);
     console.log('Vehicles seeded: ' + vehicles.length + ' items');
-
-    // 创建管理员账号
     await User.deleteMany({});
-    const admin = await User.create({
-      name: '管理员',
-      email: 'admin@autoglobal.com',
-      password: 'admin123',
-      role: 'admin',
-      permissions: { vehicles: true, inquiries: true, homepage: true, settings: true },
-      isActive: true,
-    });
-    console.log('Admin account created: admin@autoglobal.com / admin123');
+
+    if (!defaultAdminEmail || !defaultAdminPassword) {
+      console.warn('DEFAULT_ADMIN_EMAIL or DEFAULT_ADMIN_PASSWORD is missing. Skipping admin seed.');
+    } else {
+      await User.create({
+        name: defaultAdminName,
+        email: defaultAdminEmail,
+        password: defaultAdminPassword,
+        role: 'admin',
+        permissions: { vehicles: true, inquiries: true, homepage: true, settings: true },
+        isActive: true,
+      });
+      console.log(`Admin account created: ${defaultAdminEmail}`);
+    }
 
     console.log('Database Seeded Successfully!');
     process.exit();
