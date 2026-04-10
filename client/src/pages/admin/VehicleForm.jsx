@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
-import { getVehicle, createVehicle, updateVehicle, getBrands, uploadImage, uploadMultipleImages } from '../../services/api';
+import { getVehicle, createVehicle, updateVehicle, uploadImage, uploadMultipleImages } from '../../services/api';
 import {
   Save, X, Upload, Image as ImageIcon, ChevronLeft, Loader2, AlertCircle, Plus, Trash2
 } from 'lucide-react';
@@ -242,7 +242,11 @@ const VehicleForm = () => {
               <label className="block text-sm font-bold text-gray-700 mb-1">品牌 *</label>
               <select name="brand" required value={formData.brand} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-100 focus:border-[#1a73e8] transition-all">
                 <option value="">选择品牌</option>
-                {brands.map(brand => <option key={brand} value={brand}>{brand}</option>)}
+                {brands.map((brand) => (
+                  <option key={brand.value} value={brand.value}>
+                    {brand.label}
+                  </option>
+                ))}
               </select>
             </div>
             <div>
