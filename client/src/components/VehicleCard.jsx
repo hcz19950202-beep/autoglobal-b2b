@@ -92,14 +92,8 @@ const VehicleCard = ({ vehicle }) => {
             <span className="text-gray-400 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider">FOB PRICE</span>
             <div className="text-primary text-xl sm:text-2xl font-black tracking-tight">${price?.toLocaleString()}</div>
           </div>
-          <Link
-            to={`/vehicles/${id}`}
-            className="group/cta inline-flex items-center gap-1.5 rounded-2xl bg-gradient-to-r from-[#1a73e8] via-[#2b7fff] to-[#1557b0] px-2 py-2 text-[11px] font-black text-white shadow-[0_10px_24px_rgba(26,115,232,0.22)] ring-1 ring-blue-300/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(26,115,232,0.3)] active:scale-95 sm:rounded-xl sm:px-5 sm:py-3 sm:text-xs"
-          >
-            <span className="pl-2 sm:pl-0">{t('card.inquireNow')}</span>
-            <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-white/18 text-white transition-transform duration-300 group-hover/cta:translate-x-0.5 sm:h-6 sm:w-6 sm:rounded-lg sm:bg-white/12">
-              <HiOutlineArrowRight className="h-3.5 w-3.5" />
-            </span>
+          <Link to={`/vehicles/${id}`} className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary-dark hover:to-blue-700 text-white font-black px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl text-[11px] sm:text-xs transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 active:scale-95 whitespace-nowrap flex items-center gap-1.5 border border-white/10">
+            {t('card.inquireNow')} <HiOutlineArrowRight className="w-3.5 h-3.5 hidden sm:block" />
           </Link>
         </div>
       </div>
